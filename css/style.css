@@ -1,7 +1,15 @@
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+}
+
 main#playground {
   margin: 15px auto;
   width: 45vw;
   text-align: center;
+  position: relative;
 }
 
 div.cell {
@@ -14,6 +22,7 @@ div.cell {
   border: 0px solid white;
   box-sizing: border-box;
   transition: border ease .1s;
+  cursor: pointer;
 }
 
 button#go {
@@ -23,11 +32,26 @@ button#go {
   height: 10vh;
   background-color: #ccc;
   border: none;
-  margin: 3vh auto;
+  margin: 0vh auto 3vh auto;
   cursor: pointer;
 }
 
 div#message {
   text-align: center;
   font-size: 2em;
+}
+
+.security {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(15, 15, 15, 0.2);
+  z-index: 3;
+}
+
+.visible {
+  display: block;
 }
